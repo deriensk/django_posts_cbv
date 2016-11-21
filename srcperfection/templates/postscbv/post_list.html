@@ -11,10 +11,12 @@
 
 
 {% for object in object_list %}
-	<h3><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h3><br>
+	<h3><a href="{{ object.get_absolute_url }}">{{ object.id }}. {{ object.title }}</a></h3>
 	{{ object.content }}<br>
-	{{ object.id }}<br>
-
+	{% if object.image %}
+	<img src="{{ object.image.url }}" class="img-responsive">
+	{% endif %}
+	
 {% endfor %}
 
 

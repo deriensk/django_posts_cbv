@@ -9,5 +9,6 @@ class PostModelForm(forms.ModelForm):
 			'title',
 			'content',
 			'draft',
-			'email'
+			'image',
+			'email',
 			]
