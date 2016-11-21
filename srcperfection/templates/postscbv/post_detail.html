@@ -1,10 +1,6 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title></title>
-</head>
-<body>
+{% extends 'base.html' %}
 
+{% block content %}
 
 
 <h1>{{ object.title }}</h1><br>
@@ -12,6 +8,8 @@
 {{ object.id }}<br>
 
 
-</body>
-</html>
+<br><br>
 
+Back to <a href="/posts/">Lists</a>
+
+{% endblock content %}

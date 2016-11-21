@@ -1,18 +1,21 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Post list</title>
-</head>
-<body>
-<h1>Post lists</h1>
+
+{% extends 'base.html' %}
+
+{% block heading %}
+<h1><u>Blog lists</u></h1>
+{% endblock heading %}
+
+
+{% block content %}
+
+
 
 {% for object in object_list %}
-	<a href="{{ object.get_absolute_url }}">{{ object.title }}</a><br>
+	<h3><a href="{{ object.get_absolute_url }}">{{ object.title }}</a></h3><br>
 	{{ object.content }}<br>
 	{{ object.id }}<br>
 
 {% endfor %}
 
 
-</body>
-</html>
+{% endblock content %}

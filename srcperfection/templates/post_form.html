@@ -1,9 +1,12 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>{{ title }}</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block heading %}
+<h1>Have your say...</h1>
+{% endblock heading %}
+
+
+
+{% block content %}
 
 <form method='POST' action="">{% csrf_token %}
 	{{ form.as_p }}
@@ -11,5 +14,4 @@
 </form>
 
 
-</body>
-</html>
+{% endblock content %}

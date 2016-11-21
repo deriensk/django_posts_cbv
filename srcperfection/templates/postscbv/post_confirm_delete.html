@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Delete Post</title>
-</head>
-<body>
+
+{% extends 'base.html' %}
+
+{% block content %}
 
 <form action="" method="post">{% csrf_token %}
     <p>Confirm deletion of the post "{{ object.title }}"?</p>
@@ -12,6 +10,4 @@
 </form>
 
 
-
-</body>
-</html>
+{% endblock content %}
