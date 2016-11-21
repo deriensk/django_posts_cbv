@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Post list</title>
+</head>
+<body>
+<h1>Post lists</h1>
+
+{% for object in object_list %}
+	<a href="{{ object.get_absolute_url }}">{{ object.title }}</a><br>
+	{{ object.content }}<br>
+	{{ object.id }}<br>
+
+{% endfor %}
+
+
+</body>
+</html>
